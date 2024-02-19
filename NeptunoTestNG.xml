@@ -2,11 +2,11 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="IDEAL">
 <listeners>
-        <listener class-name="com.qa.tests.PostAPItest"/>
+        <listener class-name="com.qa.tests.Neptuno"/>
 </listeners>
-  <test thread-count="5" name="dxapi">
+  <test thread-count="5" name="Neptuno">
     <classes>
-      <class name="com.qa.tests.PostAPItest"/>
+      <class name="com.qa.tests.Neptuno"/>
      <!-- <class name="com.qa.tests.GetAPItest"/> -->
     </classes>
   </test> <!-- dxapi -->

@@ -80,7 +80,7 @@
           <configuration>
              <suiteXmlFiles>
               <!-- TestNG suite XML files -->
-               <suiteXmlFile>DXAPITestNG.xml</suiteXmlFile>
+               <suiteXmlFile>NeptunoTestNG.xml</suiteXmlFile>
              </suiteXmlFiles>
           </configuration>
         </plugin>
