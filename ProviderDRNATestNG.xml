@@ -4,9 +4,9 @@
 <listeners>
         <listener class-name="com.qa.tests.ProviderDRNA"/>
 </listeners>
-  <test thread-count="5" name="Neptuno">
+  <test thread-count="5" name="ProviderDRNA">
     <classes>
-      <class name="com.qa.tests.Neptuno"/>
+      <class name="com.qa.tests.ProviderDRNA"/>
      <!-- <class name="com.qa.tests.GetAPItest"/> -->
     </classes>
   </test> <!-- dxapi -->
