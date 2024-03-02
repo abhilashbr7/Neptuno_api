@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="IDEAL">
 <listeners>
-        <listener class-name="com.qa.tests.Neptuno"/>
+        <listener class-name="com.qa.tests.ProviderDRNA"/>
 </listeners>
   <test thread-count="5" name="Neptuno">
     <classes>

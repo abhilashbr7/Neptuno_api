@@ -23,7 +23,7 @@ import com.qa.data.AgencySave;
 import com.qa.data.Users;
 import com.qa.util.TestUtil;
 
-public class Neptuno extends TestBase implements IExecutionListener {
+public class ProviderDRNA extends TestBase implements IExecutionListener {
 
 	TestBase testbase;
 	RestClient restclient;
@@ -208,11 +208,13 @@ public class Neptuno extends TestBase implements IExecutionListener {
 		headermap.put("Authorization", "Bearer " + token);
 		
 		String jsonpayload = "{\r\n"
-				+ "  \"ship_reg_num\": \"PR0566EE\",\r\n"
-				+ "  \"transaction_date\": \"2024-01-31\",\r\n"
-				+ "  \"receipt_num\": \"0000000\",\r\n"
-				+ "  \"amount\": 5.00,\r\n"
-				+ "  \"trans_code\": \"MP\"\r\n"
+				+ "    \"ship_reg_num\": \"PR0566EE\",\r\n"
+				+ "    \"transaction_date\": \"2024-01-31\",\r\n"
+				+ "    \"receipt_num\": \"0000000\",\r\n"
+				+ "    \"amount\": 5.00,\r\n"
+				+ "    \"redi_user_id\": \"1234567\",\r\n"
+				+ "    \"redi_transaction_num\": \"3356234\",\r\n"
+				+ "    \"ticket_num\": \"1349992\"\r\n"
 				+ "}";
 		
 
@@ -251,19 +253,23 @@ public class Neptuno extends TestBase implements IExecutionListener {
 		headermap.put("Authorization", "Bearer " + token);
 		
 		String jsonpayload = "{\r\n"
-				+ "  \"ship_reg_num\": \"PR0566EE\",\r\n"
-				+ "  \"transaction_date\": \"2024-01-31\",\r\n"
-				+ "  \"pick_up\": \"Y\",\r\n"
-				+ "  \"mailing_address_1\": \"\",\r\n"
-				+ "  \"mailing_address_2\": \"\",\r\n"
-				+ "  \"mailing_city\": \"\",\r\n"
-				+ "  \"mailing_zip\": \"\",\r\n"
-				+ "  \"receipt_num\": \"0000000\",\r\n"
-				+ "  \"username\": \"USERNAME_1\",\r\n"
-				+ "  \"amount\": 5.00,\r\n"
-				+ "  \"trans_code\": \"RN\"\r\n"
-				+ "}\r\n"
-				+ "";
+				+ "    \"ship_reg_num\": \"PR0566EE\",\r\n"
+				+ "    \"transaction_date\": \"2024-01-31\",\r\n"
+				+ "    \"pick_up\": \"Y\",\r\n"
+				+ "    \"mailing_address_1\": \"123\",\r\n"
+				+ "    \"mailing_address_2\": \"123\",\r\n"
+				+ "    \"mailing_city\": \"San Juan\",\r\n"
+				+ "    \"mailing_zip\": \"12345\",\r\n"
+				+ "    \"residential_address_1\": \"123\",\r\n"
+				+ "    \"residential_address_2\": \"123\",\r\n"
+				+ "    \"residential_city\": \"Lares\",\r\n"
+				+ "    \"residential_zip\": \"12123\",\r\n"
+				+ "    \"receipt_num\": \"0000000\",\r\n"
+				+ "    \"amount\": 5.00,\r\n"
+				+ "    \"email\": \"email@email.com\",\r\n"
+				+ "    \"redi_user_id\": \"1394892\",\r\n"
+				+ "    \"redi_transaction_num\": \"28937291\"\r\n"
+				+ "}";
 		
 
 		closeableHttpResponse = restclient.post(ShipRenewal, jsonpayload, headermap);
