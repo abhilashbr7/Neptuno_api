@@ -80,7 +80,7 @@
           <configuration>
              <suiteXmlFiles>
               <!-- TestNG suite XML files -->
-               <suiteXmlFile>NeptunoTestNG.xml</suiteXmlFile>
+               <suiteXmlFile>ProviderDRNATestNG.xml</suiteXmlFile>
              </suiteXmlFiles>
           </configuration>
         </plugin>
